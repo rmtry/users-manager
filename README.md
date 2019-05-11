@@ -1,3 +1,6 @@
+A data-manipulating application as a challenge from Priceff Oy.
+It uses React.js library for front-end, Redux for local storage and Serverless API AWS backend services.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
