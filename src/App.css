@@ -1,6 +1,51 @@
 .App {
   text-align: center;
+  display: flex;
+  height:100vh;
 }
+
+.loading{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 200;
+}
+    /* Loading css */
+    .lds-hourglass {
+      display: inline-block;
+      margin-top: 20%;
+      position: relative;
+      width: 64px;
+      height: 64px;
+    }
+    .lds-hourglass:after {
+      content: " ";
+      display: block;
+      border-radius: 50%;
+      width: 0;
+      height: 0;
+      margin: 6px;
+      box-sizing: border-box;
+      border: 26px solid #fff;
+      border-color: #fff transparent #fff transparent;
+      animation: lds-hourglass 1.2s infinite;
+    }
+    @keyframes lds-hourglass {
+      0% {
+        transform: rotate(0);
+        animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+      }
+      50% {
+        transform: rotate(900deg);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+      }
+      100% {
+        transform: rotate(1800deg);
+      }
+    }
+    /* */
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -10,7 +55,7 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 6rem;
+  width: 11.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -18,11 +63,72 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+  .button{
+    font-size: 0.625rem !important;
+    margin: 0.5rem 0 !important;
+  }
 
+.App-body {
+  width: calc(100vw - 11.5rem);
+  overflow-y: scroll;
+}
+  .header{
+    background-color: #3f51b5 !important;
+    display: block;
+    width:calc(100vw - 11.5rem);
+    min-height:3rem;
+    height: fit-content;
+    background-color: white;
+    position: fixed;
+    z-index: 100;
+    border-bottom: 1px solid rgb(180, 180, 180);
+    text-align: left;
+    padding-left: 1rem;
+    color: white;
+  }
+    .title{
+      height: 100%;
+    }
+      .description{
+        margin-right: 1rem;
+        font-size: 0.75rem;
+      }
+  .statistic{
+    margin-top: 3rem;
+    padding: 0.25rem 0;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+    .age{
+      width: 100%;
+    }
+
+  .users-container{
+    margin-top: 3.5rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
 .App-link {
   color: #61dafb;
 }
 
+.user-card{
+  width: 12.5rem;
+  margin: 0.5rem 0 !important;
+  font-size: 0.5rem !important;
+}
+  .card-media{
+    height:5rem;
+  }
+  .card-content{
+    height: 10rem;
+    padding: 1rem 0.5rem;
+    font-size: 0.5rem !important;
+  }
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
