@@ -12,7 +12,7 @@ import Menu from './components/Menu';
 export class App extends React.Component {
 
   componentDidMount(){
-    Auth.signIn('admin@example.com', "Zxcvbnm0!");
+    Auth.signIn('hoang@example.com', "Passw0rd!");
   }
 
   render() {
